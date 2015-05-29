@@ -1,4 +1,7 @@
-[![Build Status](https://travis-ci.org/randyzwitch/RSiteCatalyst.png?branch=master)](https://travis-ci.org/randyzwitch/RSiteCatalyst)
+[![Build Status](https://travis-ci.org/g2010a/RSiteCatalyst.png?branch=master)](https://travis-ci.org/g2010a/RSiteCatalyst)
+
+THIS BRANCH IS MEANT TO ALLOW THE USE OF A PROXY THAT INJECTS AUTHENTICATION
+DETAILS TO THE REQUESTS INSTEAD OF HAVING TO DO THAT FROM R.
 
 RSiteCatalyst
 ===============
