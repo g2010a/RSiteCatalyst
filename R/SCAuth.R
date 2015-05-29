@@ -27,7 +27,11 @@
 #'
 #' @export
 
-SCAuth <- function(key, secret, company='', token.file="", auth.method="legacy", debug.mode = FALSE, use.1.3 = FALSE){
+SCAuth <- function(key, secret, company='', token.file="", auth.method="legacy",
+debug.mode = FALSE, use.1.3 = FALSE, url_base = "https://api.omniture.com"){
+
+  # Store the base url
+  assign("SC.BaseURL", url_base, envir = AdobeAnalytics)
 
   #Temporarily set SC.Credentials for GetEndpoint function call
   #SC.Credentials <<- list(key=key, secret=secret)

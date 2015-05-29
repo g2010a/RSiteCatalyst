@@ -17,9 +17,10 @@
 GetEndpoint <- function(company) {
   
   # This does not use ApiRequest() because it does not return JSON
-  endpoint <- content(POST('https://api.omniture.com/admin/1.4/rest/?method=Company.GetEndpoint', 
+  endpoint <- content(POST(paste(AdobeAnalytics$SC.BaseURL,'/admin/1.4/rest/?method=Company.GetEndpoint',""), 
          body=sprintf('{"company": "%s"}',company)),'text')
   endpoint <- gsub('\\','',gsub('"','',endpoint,fixed=TRUE),fixed=TRUE)
+  endpoint <- gsub('https://api.omniture.com', AdobeAnalytics$SC.BaseURL, endpoint, fixed=TRUE)
   return(endpoint)
    
 } #End function bracket
