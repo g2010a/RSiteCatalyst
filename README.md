@@ -3,6 +3,21 @@
 THIS BRANCH IS MEANT TO ALLOW THE USE OF A PROXY THAT INJECTS AUTHENTICATION
 DETAILS TO THE REQUESTS INSTEAD OF HAVING TO DO THAT FROM R.
 
+MODIFIED SAMPLE USE:
+
+```R
+library(devtools)                                   # Load development tools
+dev_mode(on=T)                                      # Load package TEMPORARILY
+install_github("g2010a/RSiteCatalyst", ref="master")# Load custom fork
+# install_local("~/gitrepos/RSiteCatalyst", ref="master")
+library(RSiteCatalyst)                              # ...
+
+# Start connection (dummy key, user and company are needed to bypass default checks and retrieve an endpoint)
+SCAuth("<<your_username>>:<<your_login_company>>", "DUMMYDUMMYDUMMYDUMMYDUMMYDUMMY12", url_base="<<URL to the proxy server>>") 
+# Authenticating using username and shared secret from account settings
+GetReportSuites()
+```
+
 RSiteCatalyst
 ===============
 
